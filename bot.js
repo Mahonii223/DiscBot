@@ -33,6 +33,8 @@ client.on('message', message => {
         client.commands.get('ping').execute(message, args);
     } else if(command === 'heagly'){
         client.commands.get('heagly').execute(message, args);
+    } else if(command === 'rank'){
+        client.commands.get('rank').execute(message, args);
     }
 
 });
