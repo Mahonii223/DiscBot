@@ -37,14 +37,14 @@ client.on('message', message => {
     
     if(validCommandsMap.has(command)){
         client.commands.get(command).execute(message, args);
-    } else if (command == "help"){
+    } else if (command === "help"){
         var help = "Ugh, again? Here's the list of available commands, write it down somewhere and don't bother me again.\n";
         for(let key of validCommandsMap.keys()){
             var line = key + " : " + validCommandsMap.get(key) + "\n";
             help = help + line;
         }
         message.channel.send(help);
-    } else if(!command.startsWith(".") && !message === "."){
+    } else if(!message === "." && command.startsWith(".")){
         client.commands.get("default").execute(message, args);
     }
     
