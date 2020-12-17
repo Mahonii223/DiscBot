@@ -29,8 +29,21 @@ client.on('message', message => {
     const args = message.content.slice(prefix.length).split(/ +/);
     const command = args.shift().toLowerCase();
 
-    
-    client.commands.get(command).execute(message, args);
+    var validCommands = [
+        "ping", 
+        "rank",
+        "midget",
+        "choil",
+        "heagly",
+        "maker",
+        "moon",
+        "myne",
+    ];
+    if(validCommands.includes(command)){
+        client.commands.get(command).execute(message, args);
+    } else {
+        client.commands.get("default").execute(message, args);
+    }
     
 
 });
