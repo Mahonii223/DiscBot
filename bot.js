@@ -41,7 +41,7 @@ client.on('message', message => {
     ];
     if(validCommands.includes(command)){
         client.commands.get(command).execute(message, args);
-    } else if(!command.startsWith(".")){
+    } else if(!command.startsWith(".") && !message === "."){
         client.commands.get("default").execute(message, args);
     }
     
