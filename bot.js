@@ -29,13 +29,9 @@ client.on('message', message => {
     const args = message.content.slice(prefix.length).split(/ +/);
     const command = args.shift().toLowerCase();
 
-    if(command === 'ping'){
-        client.commands.get('ping').execute(message, args);
-    } else if(command === 'heagly'){
-        client.commands.get('heagly').execute(message, args);
-    } else if(command === 'rank'){
-        client.commands.get('rank').execute(message, args);
-    }
+    
+    client.commands.get(command).execute(message, args);
+    
 
 });
 
