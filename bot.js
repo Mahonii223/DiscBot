@@ -46,6 +46,8 @@ client.on('message', message => {
         message.channel.send(help);
     } else if(!message === "." && command.startsWith(".")){
         client.commands.get("default").execute(message, args);
+    } else {
+        message.channel.send("Hey, you shouldn't be seeing this message. Let Kuro know.");
     }
     
 
