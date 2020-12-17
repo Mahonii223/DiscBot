@@ -1,25 +1,23 @@
 {
-
-    "name": "DiscBot",
-  
-    "description": "none",
-  
-    "version": "0.0.0",
-  
-    "main": "bot.js",
-  
-    "scripts": {
-  
-      "start": "node bot.js"
-  
-    },
-  
-    "dependencies": {
-  
-      "discord.js": "11.1.0",
-  
-      "request": "2.81.0"
-  
-    }
-  
-  }
+  "name": "discbot",
+  "description": "none",
+  "version": "0.0.0",
+  "main": "bot.js",
+  "scripts": {
+    "start": "node bot.js"
+  },
+  "dependencies": {
+    "discord.js": "11.1.0",
+    "request": "2.81.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Mahonii223/DiscBot.git"
+  },
+  "author": "Marcin Pham",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Mahonii223/DiscBot/issues"
+  },
+  "homepage": "https://github.com/Mahonii223/DiscBot#readme"
+}
