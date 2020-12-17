@@ -30,7 +30,7 @@ client.on('message', message => {
     const command = args.shift().toLowerCase();
 
     if(command === 'ping'){
-        client.commands.get('ping').execute(message, args);
+        message.reply('pong?');
     }
 
 });
