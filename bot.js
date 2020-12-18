@@ -24,12 +24,25 @@ client.on('ready', () => {
     console.log('I am ready!');
 
 });
-
  
 
 client.on('message', message => {
 
-    if(!message.content.startsWith(prefix) || message.author.bot) return;
+    if(message.author.bot) return;
+    if(message === "!rank" && Math.floor(Math.random() * 4) === 0){
+        var responses = [
+            "Hey, Mee. My dad would beat up your dad.",
+            "*mumble grumble*",
+            "Just so you know, \".rank\" gives better results.",
+            "!go_away_mee",
+            "Oh, great, this guy again.",
+            "**sarcastic clapping**",
+            "Wow, you're easy to impress",
+            ":rolling_eyes:"    
+        ];
+        message.channel.send(responses[Math.floor(Math.random() * responses.length)]);
+    }
+    if(!message.content.startsWith(prefix)) return;
 
     const args = message.content.slice(prefix.length).split(/ +/);
     const command = args.shift().toLowerCase();
