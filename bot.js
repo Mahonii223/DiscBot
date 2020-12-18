@@ -29,7 +29,7 @@ client.on('ready', () => {
 client.on('message', message => {
 
     if(message.author.bot) return;
-    if(message.content === "!rank" && Math.floor(Math.random() * 4) == 0){
+    if(message.content === "!rank" && Math.floor(Math.random() * 3) == 0){
         var responses = [
             "Hey, Mee. My dad would beat up your dad.",
             "*mumble grumble*",
@@ -51,7 +51,7 @@ client.on('message', message => {
     if(validCommandsMap.has(command)){
         client.commands.get(command).execute(message, args);
     } else if (command === "help"){
-        var help = "Ugh, again? Here's the list of available commands, write it down somewhere and don't bother me again.\n";
+        var help = "Here.\n";
         for(let key of validCommandsMap.keys()){
             var line = key + " : " + validCommandsMap.get(key) + "\n";
             help = help + line;
