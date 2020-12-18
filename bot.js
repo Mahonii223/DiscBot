@@ -29,7 +29,7 @@ client.on('ready', () => {
 client.on('message', message => {
 
     if(message.author.bot) return;
-    if(message === "!rank" && Math.floor(Math.random() * 4) === 0){
+    if(message === "!rank" && Math.floor(Math.random() * 4) == 0){
         var responses = [
             "Hey, Mee. My dad would beat up your dad.",
             "*mumble grumble*",
