@@ -14,10 +14,8 @@ for(const file of commandFiles){
     const command  = require(`./commands/${file}`);
 
     client.commands.set(command.name, command);
-    validCommandsMap.set(command.name, command.description);
 }
 
-validCommandsMap.delete("default");
 
 client.on('ready', () => {
 
@@ -48,12 +46,16 @@ client.on('message', message => {
     const command = args.shift().toLowerCase();
 
     
-    if(validCommandsMap.has(command)){
+    if(client.commands.has(command)){
         client.commands.get(command).execute(message, args);
     } else if (command === "help"){
         var help = "Here.\n";
         for(let key of client.commands.keys()){
-            var line = key + " : " + client.commands.get(key).description + "\n";
+            var command = client.commands.get(key);
+            if(command.visibility === "hidden"){
+                continue;
+            }
+            var line = key + " : " + command.description + "\n";
             help = help + line;
         }
         message.channel.send(help);
