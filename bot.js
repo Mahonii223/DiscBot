@@ -52,6 +52,9 @@ client.on('message', message => {
         var help = "Here.\n";
         for(let key of client.commands.keys()){
             var handler = client.commands.get(key);
+            if(handler.visibility === "hidden"){
+                continue;
+            }
             var line = handler.name + " : " + handler.description + "\n";
             help = help + line;
         }
