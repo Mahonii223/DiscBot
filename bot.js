@@ -52,8 +52,8 @@ client.on('message', message => {
         client.commands.get(command).execute(message, args);
     } else if (command === "help"){
         var help = "Here.\n";
-        for(let key of validCommandsMap.keys()){
-            var line = key + " : " + validCommandsMap.get(key) + "\n";
+        for(let key of client.commands.keys()){
+            var line = key + " : " + commands.get(key).description + "\n";
             help = help + line;
         }
         message.channel.send(help);
