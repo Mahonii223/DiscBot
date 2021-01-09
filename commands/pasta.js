@@ -7,7 +7,7 @@ module.exports = {
         if (err) {
             return console.log(err);
         }
-        message.channel.send('data');
+        message.channel.send(data);
 });
     }
 }
