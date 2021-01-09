@@ -1,8 +1,6 @@
 module.exports = {
-    name: 'addpasta',
-    description: "saves the best memories",
-    permission: "moderator",
-    visibility: "hidden",
+    name: 'backup',
+    description: "displays all file-saved data",
     execute(message, args){
         
         message.channel.send('Pong. this is getting boring.');
