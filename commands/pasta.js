@@ -8,6 +8,7 @@ module.exports = {
             return;
         }
         var title = args.shift();
+        message.channel.send("reached here.1");
         fs.readFile('copypastas.txt', 'utf8', function (err,data) {
         if (err) {
             message.channel.send("Error occured reading the file: " + err.message);
