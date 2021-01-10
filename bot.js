@@ -45,7 +45,7 @@ client.on('message', message => {
     const args = message.content.slice(prefix.length).split(/ +/);
     const command = args.shift().toLowerCase();
 
-    
+    try{
     if(client.commands.has(command)){
         client.commands.get(command).execute(message, args);
     } else if (command === "help"){
@@ -61,6 +61,9 @@ client.on('message', message => {
         message.channel.send(help);
     } else if(!command.startsWith(".")){
         client.commands.get("default").execute(message, args);
+    }
+    } catch (error) {
+        message.channel.send("something failed");
     }
     
 

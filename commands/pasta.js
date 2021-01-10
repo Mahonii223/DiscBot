@@ -2,7 +2,6 @@ module.exports = {
     name: 'pasta',
     description: "brings back the best memories",
     execute(message, args){
-        try{
         var fs = require('fs')
         var title = args.shift();
         fs.readFile('copypastas.txt', 'utf8', function (err,data) {
@@ -24,8 +23,5 @@ module.exports = {
             message.channel.send(output);
         }
         });
-        } catch (error) {
-            message.channel.send(error.message);
-        }
     }
 }
