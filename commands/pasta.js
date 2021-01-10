@@ -2,11 +2,12 @@ module.exports = {
     name: 'pasta',
     description: "brings back the best memories",
     execute(message, args){
-        /**var fs = require('fs')
+        try{
+        var fs = require('fs')
         var title = args.shift();
         fs.readFile('copypastas.txt', 'utf8', function (err,data) {
         if (err) {
-            return console.log(err);
+            message.channel.send("Error occured reading the file: " + err.message);
         }
         const pastas = data.split("<$pasta$>");
         var output = "";
@@ -22,6 +23,9 @@ module.exports = {
         } else {
             message.channel.send(output);
         }
-        });**/
+        });
+        } catch (error) {
+            message.channel.send(error.message);
+        }
     }
 }
