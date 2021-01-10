@@ -16,7 +16,7 @@ module.exports = {
         const pastas = data.split("<$pasta$>");
         var output = "";
         for(let pasta of pastas){
-            var content = pasta.split(" ",2);
+            var content = pasta.split(" ");
             if(content.shift() === title){
                 output = content.join(" ");
             }
