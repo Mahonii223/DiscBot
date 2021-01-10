@@ -13,13 +13,12 @@ module.exports = {
             message.channel.send("Error occured reading the file: " + err.message);
             return;
         }
-        message.channel.send("reached here.");
         const pastas = data.split("<$pasta$>");
         var output = "";
         for(let pasta of pastas){
             var content = pasta.split(" ",2);
             if(content.shift() === title){
-                output = content.shift();
+                output = content.join(" ");
             }
         }
 
