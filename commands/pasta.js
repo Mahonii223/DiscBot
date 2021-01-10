@@ -7,13 +7,13 @@ module.exports = {
             message.channel.send("Pasta what?");
             return;
         }
-        message.channel.send("reached here.1");
         var title = args.shift();
         fs.readFile('copypastas.txt', 'utf8', function (err,data) {
         if (err) {
             message.channel.send("Error occured reading the file: " + err.message);
         }
         message.channel.send("reached here.");
+        /**
         const pastas = data.split("<$pasta$>");
         var output = "";
         for(let pasta of pastas){
@@ -28,6 +28,7 @@ module.exports = {
         } else {
             message.channel.send(output);
         }
+        */
         });
     }
 }
