@@ -3,6 +3,10 @@ module.exports = {
     description: "brings back the best memories",
     execute(message, args){
         var fs = require('fs')
+        if(args.length === 0){
+            message.channel.send("Pasta what?");
+            return;
+        }
         var title = args.shift();
         fs.readFile('copypastas.txt', 'utf8', function (err,data) {
         if (err) {
