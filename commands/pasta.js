@@ -12,6 +12,7 @@ module.exports = {
         if (err) {
             message.channel.send("Error occured reading the file: " + err.message);
         }
+        message.channel.send("reached here.");
         const pastas = data.split("<$pasta$>");
         var output = "";
         for(let pasta of pastas){
