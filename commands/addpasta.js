@@ -5,12 +5,11 @@ module.exports = {
     execute(message, args){
         var fs = require('fs');
         
-        fs.appendFile('copypastas.txt', 'Hello content!', function (err) {
-            if (err) throw err;
-        });
+        var content = args.join(" ");
 
-        for(let arg of args){
-            message.channel.send("\narg: " + arg);
-        }
+        fs.appendFile('copypastas.txt', "<$pasta$>"+content, function (err) {
+            if (err) throw err;
+            message.channel.send("Pasta saved.");
+        });
     }
 }

@@ -4,8 +4,12 @@ module.exports = {
     visibility: "hidden",
     perm: "moderator",
     execute(message, args){
-        
-        message.channel.send('Pong. this is getting boring.');
-        
+        var fs = require('fs')
+        fs.readFile('copypastas.txt', 'utf8', function (err,data) {
+             if (err) {
+                return console.log(err);
+            }
+            message.channel.send(data);
+        }); 
     }
 }
