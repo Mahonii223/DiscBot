@@ -39,12 +39,12 @@ client.on('message', message => {
             ":rolling_eyes:"    
         ];
         message.channel.send(responses[Math.floor(Math.random() * responses.length)]);
-    } /*else if (message.content.toLowerCase().includes(" off, stabby") || message.content.toLowerCase().includes(" off stabby")){
+    } else if (message.content.toLowerCase().includes(" off, stabby") || message.content.toLowerCase().includes(" off stabby")){
         var response = "You " + message.content.toLowerCase().substr(0, message.content.toLowerCase().indexOf(" stabby")) + ".";
         
         message.reply(response);
         return;
-    }*/
+    }
     if(!message.content.startsWith(prefix)) return;
 
     const args = message.content.slice(prefix.length).split(/ +/);
