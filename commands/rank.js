@@ -1,6 +1,7 @@
 module.exports = {
     name: 'rank',
     description: "provides your current rank",
+    enabled: true,
     execute(message, args){
         var rankResponses = [
             "who cares? I don't. We have that other fella for that, but last time I've seen him he was getting a wedgie from Rhythm.", 

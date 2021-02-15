@@ -2,6 +2,7 @@ module.exports = {
     name: 'addpasta',
     description: "saves the best memories",
     perm: 'moderator',
+    enabled: false,
     execute(message, args){
         var fs = require('fs');
         if(args.length === 0){

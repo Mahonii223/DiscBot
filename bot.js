@@ -47,7 +47,11 @@ client.on('message', message => {
 
     try{
     if(client.commands.has(command)){
-        client.commands.get(command).execute(message, args);
+        var handler = client.commands.get(command);
+        if(!handler.enabled){
+            continue;
+        }
+        handler.execute(message, args);
     } else if (command === "help"){
         var help = "Here.\n";
         for(let key of client.commands.keys()){

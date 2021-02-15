@@ -3,6 +3,7 @@ module.exports = {
     description: "displays all file-saved data",
     visibility: "hidden",
     perm: "moderator",
+    enabled: true,
     execute(message, args){
         var fs = require('fs')
         fs.readFile('copypastas.txt', 'utf8', function (err,data) {

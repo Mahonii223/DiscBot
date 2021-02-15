@@ -1,6 +1,7 @@
 module.exports = {
     name: 'pasta',
     description: "brings back the best memories",
+    enabled: false,
     execute(message, args){
         var fs = require('fs')
         if(args.length === 0){
