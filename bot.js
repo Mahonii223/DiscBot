@@ -41,6 +41,7 @@ client.on('message', message => {
         message.channel.send(responses[Math.floor(Math.random() * responses.length)]);
     } else if (message.content.toLowerCase().includes(" off, stabby") || message.content.toLowerCase().includes(" off stabby")){
         var response = "You " + message.content.toLowerCase().substr(0, message.content.toLowerCase().indexOf(" stabby")) + ".";
+        
         message.reply(response);
     }
     if(!message.content.startsWith(prefix)) return;
