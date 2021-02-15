@@ -53,9 +53,9 @@ client.on('message', message => {
     try{
     if(client.commands.has(command)){
         var handler = client.commands.get(command);
-        if(!handler.enabled){
-            continue;
-        }
+        /*if(!handler.enabled){
+            return;
+        }*/
         handler.execute(message, args);
     } else if (command === "help"){
         var help = "Here.\n";
