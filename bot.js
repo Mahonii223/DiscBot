@@ -72,7 +72,7 @@ client.on('message', message => {
         client.commands.get("default").execute(message, args);
     }
     } catch (error) {
-        message.channel.send("something failed");
+        message.channel.send("something failed: " + error.message);
     }
     
 
