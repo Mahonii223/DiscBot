@@ -11,7 +11,7 @@ module.exports = {
             "Howdily doodily, fella!",
             "Greetings, stranger."
             ];
-        var question = " Do you make knives? If so, post a picture of a knife you have made in " + message.guild.channels.find(channel => channel.name === "#🔪-knife-pictures").toString(); + " to earn the maker role.";
+        var question = " Do you make knives? If so, post a picture of a knife you have made in " + message.guild.channels.find(channel => channel.name === "🔪-knife-pictures").toString(); + " to earn the maker role.";
         message.channel.send(args[0] + greet[Math.floor(Math.random() * greet.length)] + question);
         }
     }
