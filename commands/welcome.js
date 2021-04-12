@@ -9,6 +9,6 @@ module.exports = {
             "Greetings, stranger."
             ];
         var question = ' Do you make knives? If so, post a picture of a knife you have made #🔪-knife-pictures to earn the maker role.';
-        message.reply(args[0] + rankResponses[Math.floor(Math.random() * greet.length)] + greet);
+        message.reply(args[0] + greet[Math.floor(Math.random() * greet.length)] + question);
     }
 }
