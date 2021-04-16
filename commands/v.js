@@ -5,7 +5,9 @@ module.exports = {
     enabled: true,
     execute(message, args){
         //message.channel.send(message.client.channels.toString());
-        const channel = message.client.channels.cache.find(channel => channel.name === args.shift());
+        var channelMap = new Map();
+        channelMap.set('#general', "789170479026012162");
+        const channel = message.client.channels.get(channelMap.get(args.shift()));
         channel.send(args);
     }
 }
