@@ -7,8 +7,7 @@ module.exports = {
         
         //var channelMap = new Map();
         //channelMap.set(`#general`, `789170479026012162`);
-        //const channel = message.client.channels.get(channelMap'789170479026012162');
-        //channel.send(args.join(' '));
-        throw args.join(' ');
+        const channel = message.client.channels.get(args.shift().substr(3, 18));
+        channel.send(args.join(' '));
     }
 }
