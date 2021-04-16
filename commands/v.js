@@ -4,10 +4,11 @@ module.exports = {
     visibility: "hidden",
     enabled: true,
     execute(message, args){
-        //message.channel.send(message.client.channels.toString());
-        var channelMap = new Map();
-        //channelMap.set('#general', "789170479026012162");
-        const channel = message.client.channels.get('789170479026012162');
-        channel.send(args.join(' '));
+        
+        //var channelMap = new Map();
+        //channelMap.set(`#general`, `789170479026012162`);
+        //const channel = message.client.channels.get(channelMap'789170479026012162');
+        //channel.send(args.join(' '));
+        throw args.join(' ');
     }
 }
