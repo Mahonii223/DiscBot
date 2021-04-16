@@ -8,6 +8,6 @@ module.exports = {
         var channelMap = new Map();
         //channelMap.set('#general', "789170479026012162");
         const channel = message.client.channels.get('789170479026012162');
-        channel.send(args);
+        channel.send(args.join(' '));
     }
 }
