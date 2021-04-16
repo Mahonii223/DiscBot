@@ -4,7 +4,7 @@ module.exports = {
     visibility: "hidden",
     enabled: true,
     execute(message, args){
-        const channel = message.client.channels.cache.find(channel => channel.name === args.shift());
+        const channel = message.guild.channels.cache.find(channel => channel.name === args.shift());
         channel.send(args);
     }
 }
