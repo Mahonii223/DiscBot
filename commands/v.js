@@ -4,7 +4,8 @@ module.exports = {
     visibility: "hidden",
     enabled: true,
     execute(message, args){
-        const channel = message.client.channels.cache.find(channel => channel.name === args.shift());
-        channel.send(args);
+        message.channel.send(message.client.channels.cache.toString());
+        //const channel = message.client.channels.cache.find(channel => channel.name === args.shift());
+        //channel.send(args);
     }
 }
