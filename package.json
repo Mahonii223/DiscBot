@@ -1,7 +1,7 @@
 {
   "name": "discbot",
   "description": "none",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "main": "bot.js",
   "scripts": {
     "start": "node bot.js"
@@ -19,5 +19,8 @@
   "bugs": {
     "url": "https://github.com/Mahonii223/DiscBot/issues"
   },
-  "homepage": "https://github.com/Mahonii223/DiscBot#readme"
+  "homepage": "https://github.com/Mahonii223/DiscBot#readme",
+  "engines": {
+    "node": "14.x"
+  }
 }
