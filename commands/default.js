@@ -1,5 +1,5 @@
-import { getShInsult } from utils/shakespeareanInsults.js
 
+const utils = require("./utils");
 
 module.exports = {
     name: 'default',
@@ -7,7 +7,7 @@ module.exports = {
     visibility: "hidden",
     enabled: true,
     execute(message, args){
-        var insult = getShInsult();
+        var insult = utils.getShInsult();
         message.reply("are you simple? \"" + message + "\" is not a valid command, you " + insult + ".");
     }
 }

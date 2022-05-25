@@ -89,10 +89,14 @@ const insultList = [
     "jointhead"
 ]
 
-export function getShInsult() {
+function getShInsult(){
     return [
         prefix1List[Math.floor(Math.random() * prefix1List.length)] + ",",
         prefix2List[Math.floor(Math.random() * prefix2List.length)],
         insultList[Math.floor(Math.random() * insultList.length)]
     ].join(" ");
 }
+
+module.exports = {
+    getShInsult
+};
