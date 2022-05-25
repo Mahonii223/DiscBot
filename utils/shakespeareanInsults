@@ -1,0 +1,100 @@
+
+const prefix1List = [
+    "artless",
+    "bawdy",
+    "beslubbering",
+    "bootless",
+    "churlish",
+    "cockered",
+    "clouted",
+    "craven",
+    "currish",
+    "dankish",
+    "dissembling",
+    "droning",
+    "errant",
+    "fawning",
+    "fobbing",
+    "froward",
+    "frothy",
+    "gleeking",
+    "goatish",
+    "gorbellied",
+    "impertinent",
+    "infections",
+    "jarring",
+    "loggerheaded",
+    "lumpish",
+    "mammering",
+    "mangled"
+];
+
+const prefix2List = [
+    "base-court",
+    "bat-fowling",
+    "beef-witted",
+    "beetle-headed",
+    "boil-brained",
+    "clapper-clawed",
+    "clay-brained",
+    "common-kissing",
+    "crook-pated",
+    "dismal-dreaming",
+    "dizzy-eyed",
+    "doghearted",
+    "dread-bolted",
+    "earth-vexing",
+    "elf-skinned",
+    "fat-kidneyed",
+    "fen-sucked",
+    "flap-mouthed",
+    "fly-bitten",
+    "folly-fallen",
+    "fool-born",
+    "full-gorged",
+    "guts-griping",
+    "half-brained",
+    "hasty-witted",
+    "hedge-born",
+    "hell-hated"
+];
+
+const insultList = [
+    "apple-john",
+    "baggage",
+    "barnacle",
+    "bladder",
+    "boar-pig",
+    "bugbear",
+    "bum-bailey",
+    "canker-blossom",
+    "clack-dish",
+    "clotpole",
+    "coxcomb",
+    "codpiece",
+    "death-token",
+    "dewberry",
+    "flap-dragon",
+    "flax-wench",
+    "flirt-gill",
+    "foot-licker",
+    "fustilarian",
+    "giglet",
+    "gudgeon",
+    "haggard",
+    "harpy",
+    "hedge-pig",
+    "horn-beast",
+    "hugger-mugger",
+    "jointhead"
+]
+
+module.exports = {
+    getShInsult(){
+        return [
+            prefix1List[Math.floor(Math.random() * prefix1List.length)] + ",",
+            prefix2List[Math.floor(Math.random() * prefix2List.length)],
+            insultList[Math.floor(Math.random() * insultList.length)]
+        ].join(" ");
+    }
+}
